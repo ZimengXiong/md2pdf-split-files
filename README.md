@@ -5,7 +5,7 @@ Rust Pandoc wrapper that converts Markdown files to multiple PDFs by splitting o
 ## Installation
 
 ```bash
-git clone https://github.com/zimengxiong/md2pdf-split-pages.git
+git clone https://github.com/zimengxiong/md2pdf-split-pages.git && cd md2pdf-split-pages
 cargo install --path .
 ```
 
@@ -26,8 +26,9 @@ md2pdf-split-pages -i input.md [-o output_dir] -- [pandoc_arguments]
 
 ```bash
 git clone https://github.com/zimengxiong/md2pdf-split-pages.git
+cd md2pdf-split-pages
 cargo build
-cd md2pdf-split-pages/example
+cd example
 ./../target/debug/md2pdf-split-pages -i input.md -o out -- -V geometry:margin=1in
 ```
 
