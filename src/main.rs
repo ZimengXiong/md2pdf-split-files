@@ -92,9 +92,12 @@ fn process_markdown_to_pdf(
     output_dir: &Path,
     pandoc_args: &[String],
 ) -> Result<(), Box<dyn std::error::Error>> {
-    use tempfile::NamedTempFile;
+    use tempfile::Builder;
 
-    let mut temp_file = NamedTempFile::new_in(output_dir)?;
+    // Use a .md extension for the temp file to help pandoc deduce the format
+    let mut temp_file = Builder::new()
+        .suffix(".md")
+        .tempfile_in(output_dir)?;
     temp_file.write_all(content.as_bytes())?;
     let temp_md_path = temp_file.path();
 
