@@ -1,18 +1,18 @@
-# md2pdf-split-pages
+# md2pdf-split-files
 
 Rust Pandoc wrapper that converts Markdown files to multiple PDFs by splitting on `\newfile` markers.
 
 ## Installation
 
 ```bash
-git clone https://github.com/zimengxiong/md2pdf-split-pages.git && cd md2pdf-split-pages
+git clone https://github.com/zimengxiong/md2pdf-split-files.git && cd md2pdf-split-files
 cargo install --path .
 ```
 
 ## Usage
 
 ```bash
-md2pdf-split-pages -i input.md [-o output_dir] -- [pandoc_arguments]
+md2pdf-split-files -i input.md [-o output_dir] -- [pandoc_arguments]
 ```
 
 ## Functionality
@@ -25,15 +25,15 @@ md2pdf-split-pages -i input.md [-o output_dir] -- [pandoc_arguments]
 ## Example
 
 ```bash
-git clone https://github.com/zimengxiong/md2pdf-split-pages.git
-cd md2pdf-split-pages
+git clone https://github.com/zimengxiong/md2pdf-split-files.git
+cd md2pdf-split-files
 cargo build
 cd example
-./../target/debug/md2pdf-split-pages -i input.md -o out -- -V geometry:margin=1in
+./../target/debug/md2pdf-split-files -i input.md -o out -- -V geometry:margin=1in
 ```
 
 ```bash
-❯ ./../target/debug/md2pdf-split-pages -i input.md -o out -- -V geometry:margin=1in
+❯ ./../target/debug/md2pdf-split-files -i input.md -o out -- -V geometry:margin=1in
 Generated PDF: cb_u3.3_&_u3.4:_mathematical_expressions_and_strings.pdf
 Generated PDF: cb_u3.5:_boolean_expression.pdf
 Generated PDF: cb_u3.6_&_u3.7_conditionals_&_nested_conditionals.pdf
